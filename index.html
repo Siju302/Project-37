@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Bank App</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+<body>
+    <h1><strong><u>Bank App.</u></strong></h1>
+    <div id="container"></div>
+        <p>Enter Transaction Amount: </p> 
+        <input type="number">
+        <br>
+        <br>
+        <button id="Debit" onclick="debitfunction()">Debit</button>
+        <button id="Credit" onclick="creditfunction()">Credit</button>
+        <p id="result"></p>
+
+        <script>
+
+            document.getElementById("result").innerHTML = account_balance;
+            function debitfunction() {
+                var account_balance = parseInt(current_balance_el.innerText) - parseInt(entered_amount_el);
+                current_balance_el.innerText = parseInt(account_balance);
+                document.getElementById("result").innerHTML = account_balance;
+            }
+            function creditfunction() {
+                var account_balance = parseInt(current_balance_el.innerText) + parseInt(entered_amount_el);
+                current_balance_el.innerText = parseInt(account_balance);
+                document.getElementById("result").innerHTML = account_balance;
+            }
+        </script>
+</body>
+</html>
